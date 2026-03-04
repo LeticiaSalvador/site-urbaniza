@@ -1,0 +1,118 @@
+body {
+    background:#ffeab9e8;
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+    line-height: 1.5;
+
+}
+
+.slogan {
+    max-width: 100%;
+    text-align: center;
+    background:rgba(167, 231, 130, 0.836);
+    font-size: 25px;
+    color: #333;
+    
+}
+
+.slogan ul li {
+    list-style:none;
+    display:inline;
+    margin:0 40px;
+    
+
+    
+}
+
+ul li a{
+    text-decoration:none;
+    color:rgb(53, 28, 8);
+    font-weight:bold;
+
+}
+
+#frase{
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+section{
+    text-align: left;
+}
+
+form{
+    background: lightcoral;
+    padding:20px;
+    border-radius:10px;
+    text-align: left;;
+}
+
+form input, form select{
+    width:95%;
+    padding:10px;
+    border:2px;
+    border-radius:5px;
+}
+
+section{
+    text-align:justify;
+    max-width:800px;
+    margin:auto;
+    margin-bottom: 40px;
+}
+
+#missao{
+    margin-top:40px;
+    margin-bottom:40px;
+}
+
+
+h2{
+    text-align: left;
+    color: rgb(10, 107, 75);
+    font-size:20px;
+}
+
+label{
+    color:aliceblue;
+    font-weight:bold;
+}
+
+#contato {
+    text-align: center;
+    text-decoration:none;
+}
+
+.contato{
+    text-align: center;
+}
+
+form button{
+    max-width: 200px;
+    margin: 20px auto;
+    display: block;
+    padding:10px;
+    border-radius:5px;
+}
+
+
+form select{
+   width:98%;
+}
+
+form textarea{
+    width:94%;
+    padding:15px;
+    border:2px;
+    border-radius:5px;
+}
+
+#reparos img{
+    max-width:65%;
+    display: block;;
+    margin: 0 auto;
+    border-radius:10px;
+    
+}
+
