@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>URBANIZA+</title>
     <link rel="stylesheet" href="urbaniza.css">
 </head>
+
 <body>
     <header class="slogan">
         <img src="urbaniza.png" alt="Logotipo Urbaniza+">
@@ -23,16 +25,20 @@
     <section id="quemsomos">
         <h2>Quem Somos?</h2>
         <p>Somos a Urbaniza+, um sistema independente criado para organizar a força da população
-         e transformar a maneira como os problemas das nossas cidades são relatados. 
-         Oferecemos uma plataforma intuitiva onde o cidadão pode registrar e detalhar falhas urbanas de forma estruturada,
-          gerando evidências claras que facilitam o trabalho de fiscalização e solução. Nosso propósito é atuar 
-          como um canal de transparência e cidadania, garantindo que as denúncias sejam formalizadas com precisão para que os órgãos competentes
-           possam acatá-las e resolvê-las com agilidade. Na Urbaniza+, acreditamos que a tecnologia nas mãos da comunidade é a ferramenta mais 
-           eficaz para construir um ambiente urbano melhor para todos.</p>
+            e transformar a maneira como os problemas das nossas cidades são relatados.
+            Oferecemos uma plataforma intuitiva onde o cidadão pode registrar e detalhar falhas urbanas de forma
+            estruturada,
+            gerando evidências claras que facilitam o trabalho de fiscalização e solução. Nosso propósito é atuar
+            como um canal de transparência e cidadania, garantindo que as denúncias sejam formalizadas com precisão para
+            que os órgãos competentes
+            possam acatá-las e resolvê-las com agilidade. Na Urbaniza+, acreditamos que a tecnologia nas mãos da
+            comunidade é a ferramenta mais
+            eficaz para construir um ambiente urbano melhor para todos.</p>
     </section>
     <section id="registro">
         <h2>Informe a sua denúncia:</h2>
-        <form action="#" method="post">
+        <!--<form action="#" method="post">-->
+        <form id="formDenuncia">
             <label for="nome">Nome:</label>
             <input type="text" id="nome" name="nome" placeholder="Digite o seu nome" required><br><br>
             <label for="email">E-mail:</label>
@@ -54,48 +60,68 @@
                 <option value="Outros">Outros</option>
             </select><br><br>
             <label for="descricao">Descreva o problema:</label>
-            <textarea id="descricao" name="descricao" placeholder="Descreva o problema ocorrido"rows="5" column="30"></textarea><br><br>
+            <textarea id="descricao" name="descricao" placeholder="Descreva o problema ocorrido" rows="5"
+                column="30"></textarea><br><br>
             <label for="envio">Mande uma foto da ocorrência:</label>
-            <input type="file" id="envio" name="envio"><br><br>
+            <input type="file" id="envio" name="envio" multiple><br><br>
+            <div id="preview" style="display:none; margin-top:10px;"></div>
             <button type="submit">Enviar denúncia</button>
-            </form>
-            <section id="missao">
-                <h2>Missão</h2>
-                <p>Dar autonomia e voz ao cidadão através da tecnologia, 
-                    fornecendo as ferramentas necessárias para que cada problema urbano
-                     seja documentado com precisão e transformado em uma demanda estruturada.
-                      Buscamos encurtar a distância entre o relato do problema e a solução, 
-                      promovendo a transparência e a eficiência na gestão das nossas cidades 
-                      por meio da participação ativa da sociedade.</p>
-            </section>
-            <section id="reparos">
-                <img src="reparos.png" alt="Reparos">
-            </section>
-            <section id="valores">
-                <h2>Valores</h2>
-                <ul>
-                    <li><strong>Cidadania Ativa:</strong> Acreditamos que a transformação das cidades começa com o engajamento e 
-                         a participação direta de cada morador.</li>
-                    <li><strong>Independência:</strong> Atuamos de forma autônoma, garantindo que o foco principal
-                         seja sempre a resolução dos problemas relatados pela população.</li>
-                    <li><strong>Transparência:</strong> Prezamos pela clareza em todas as etapas do processo, 
-                        desde o registro da ocorrência até o acompanhamento junto aos órgãos responsáveis.</li>
-                    <li><strong>Eficiência Tecnológica:</strong> Utilizamos a tecnologia como facilitadora para organizar
-                         informações e agilizar o caminho até a solução.</li>
-                    <li><strong>Responsabilidade Social:</strong>Nosso compromisso é com o bem-estar coletivo e 
-                        a melhoria contínua do ambiente urbano para todos.</li>
-                    <li><strong>Precisão:</strong>Valorizamos o rigor no registro dos dados 
-                        para que as demandas sejam incontestáveis e devidamente acatadas.</li>
-                </ul>
-            </section>
-            <section id="contato">
-                <h2 class="contato">Contato</h2>
-                <p>Caso você tenha incertezas, entre em contato conosco</p>
-                <p>E-mail: <a href="urbaniza+@outlook.com.br">urbaniza+@outlook.com.br</a></p>
-
-            </section>
-            
+            <p id="mensagem" style="display:none;"></p>
         </form>
+        <br><br>
+        <a href="denuncias.html">
+            <button>Ver denúncias</button>
+        </a>
+
+        <section id="missao">
+            <h2>Missão</h2>
+            <p>Dar autonomia e voz ao cidadão através da tecnologia,
+                fornecendo as ferramentas necessárias para que cada problema urbano
+                seja documentado com precisão e transformado em uma demanda estruturada.
+                Buscamos encurtar a distância entre o relato do problema e a solução,
+                promovendo a transparência e a eficiência na gestão das nossas cidades
+                por meio da participação ativa da sociedade.</p>
+        </section>
+        <section id="reparos">
+            <img src="reparos.png" alt="Reparos">
+        </section>
+        <section id="valores">
+            <h2>Valores</h2>
+            <ul>
+                <li><strong>Cidadania Ativa:</strong> Acreditamos que a transformação das cidades começa com o
+                    engajamento e
+                    a participação direta de cada morador.</li>
+                <li><strong>Independência:</strong> Atuamos de forma autônoma, garantindo que o foco principal
+                    seja sempre a resolução dos problemas relatados pela população.</li>
+                <li><strong>Transparência:</strong> Prezamos pela clareza em todas as etapas do processo,
+                    desde o registro da ocorrência até o acompanhamento junto aos órgãos responsáveis.</li>
+                <li><strong>Eficiência Tecnológica:</strong> Utilizamos a tecnologia como facilitadora para organizar
+                    informações e agilizar o caminho até a solução.</li>
+                <li><strong>Responsabilidade Social:</strong>Nosso compromisso é com o bem-estar coletivo e
+                    a melhoria contínua do ambiente urbano para todos.</li>
+                <li><strong>Precisão:</strong>Valorizamos o rigor no registro dos dados
+                    para que as demandas sejam incontestáveis e devidamente acatadas.</li>
+            </ul>
+        </section>
+        <section id="contato">
+            <h2 class="contato">Contato</h2>
+            <p>Caso você tenha incertezas, entre em contato conosco</p>
+            <p>E-mail: <a href="urbaniza+@outlook.com.br">urbaniza+@outlook.com.br</a></p>
+
+        </section>
     </section>
+
+    <section class="grupo">
+        <img src="grupourbaniza+.jpeg" alt="Grupo Urbaniza+">
+
+        <p><strong>Yosef Klisman</strong> - Responsável pelo HTML e CSS</p>
+        <p><strong>Letícia Salvador</strong> - Responsável pelo JAVASCRIPT</p>
+        <p><strong>Elder Carvalho</strong> - Apoio no desenvolvimento</p>
+        <p><strong>Angélica</strong> - Apoio no desenvolvimento</p>
+    </section>
+
+    <script src="urbaniza+.js"></script>
+
 </body>
+
 </html>
